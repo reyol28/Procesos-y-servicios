@@ -10,7 +10,7 @@ que el pid del programa mp4 es el 1000 y los pids se generan de uno en uno en or
 
 b) ¿Qué salida genera este código? ¿Podría producirse otra salida? Justifica la respuesta
 
-Este codigo genera la salida CCC - AAA - BBB, podría producirse otra salida si al proceso padre le metemos un wait para que su hijo salga antes.
+Este codigo genera la salida CCC - AAA - CCC - BBB, podría producirse otra salida si al proceso padre le metemos un wait para que su hijo salga antes.
 
 c) Modificar el código para que la salida por pantalla sea:
 CCC
