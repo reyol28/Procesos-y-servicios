@@ -15,24 +15,22 @@ Este codigo genera la salida CCC - AAA - CCC - BBB, podría producirse otra sali
 c) Modificar el código para que la salida por pantalla sea:
 CCC
 BBB
-AAA*/
+AAA    Para que el CCC solo salga una vez, necesito meterlo en el proceso padre o crear un hijo nuevo que ejecute el printf("CCC"); 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 void main()
 {
- 
- if (fork()!=0)
- {
-    
-    if (fork()!=0)
-    {
-        wait(NULL);
-        printf("AAA \n");
-    }
-    else printf("CCC \n");
-    wait(NULL);
-    
- } else printf("BBB \n");
- exit(0);
+   if (fork()!=0)
+   {
+      wait(NULL);
+      printf("AAA \n");
+   } 
+   else
+   { 
+      printf("CCC \n");
+      printf("BBB \n");
+   }
+   exit(0);
 }
